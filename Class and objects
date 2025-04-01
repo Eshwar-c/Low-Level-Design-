@@ -1,0 +1,26 @@
+Learning Classes and Objects 
+
+class Bike{
+    public String  color;
+    public  int Topspeed;
+    public  int Milage;
+
+    public Bike(String color, int Topspeed, int Milage){
+        this.color = color;
+        this.Topspeed = Topspeed;
+        this.Milage = Milage;
+    }
+    public void display(){
+        System.out.println("Color of Bike is : " + color);
+        System.out.println("Topspeed of Bike is : " + Topspeed);
+        System.out.println("Milage of Bike is : " + Milage);
+    }
+
+}
+
+class Main{
+    public static void main(String[]  args){
+       Bike bike =  new Bike("Blue",100,45);
+       bike.display();
+   }
+}

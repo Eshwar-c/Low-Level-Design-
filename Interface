@@ -1,0 +1,22 @@
+interface Human{
+    void walk();
+     default void eat(){
+         System.out.println("this is dedault human eating ");
+     }
+}
+
+
+
+class Gokul implements Human{
+    public void walk() {
+        System.out.println("Gokul is walking ");
+    }
+}
+
+class Main{
+    public static  void main(String[] args) {
+        Gokul g = new Gokul();
+        g.eat();
+        g.walk();
+    }
+}

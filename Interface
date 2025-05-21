@@ -1,22 +1,17 @@
-interface Human{
-    void walk();
-     default void eat(){
-         System.out.println("this is dedault human eating ");
-     }
-}
-
-
-
-class Gokul implements Human{
-    public void walk() {
-        System.out.println("Gokul is walking ");
+interface books{
+    void displayBook();
+    default void  book(){
+     System.out.println("default book section ");
+        }}
+class engBook implements books{
+    public void displayBook(){
+        System.out.println("English Book");
     }
 }
-
 class Main{
-    public static  void main(String[] args) {
-        Gokul g = new Gokul();
-        g.eat();
-        g.walk();
+    public static  void main(String args[]){
+        engBook b =  new engBook();
+        b.displayBook();
+        b.book();
     }
-}
+    }

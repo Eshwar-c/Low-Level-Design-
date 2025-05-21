@@ -1,26 +1,32 @@
 Learning Classes and Objects 
 
-class Bike{
-    public String  color;
-    public  int Topspeed;
-    public  int Milage;
+import java.sql.SQLOutput;
 
-    public Bike(String color, int Topspeed, int Milage){
-        this.color = color;
-        this.Topspeed = Topspeed;
-        this.Milage = Milage;
+class Car{
+    private String color ;
+    private String model;
+    private int year ;
+
+    Car(String color , String model , int year){
+        this.color =  color;
+        this.model =  model;
+        this.year=  year;
     }
-    public void display(){
-        System.out.println("Color of Bike is : " + color);
-        System.out.println("Topspeed of Bike is : " + Topspeed);
-        System.out.println("Milage of Bike is : " + Milage);
+
+    public void displayCar(){
+        System.out.println("car color : "+ color);
+        System.out.println("car model : "+ model);
+        System.out.println("car year : "+ year);
+
     }
 
 }
-
 class Main{
-    public static void main(String[]  args){
-       Bike bike =  new Bike("Blue",100,45);
-       bike.display();
-   }
+    public static  void main(String args[]){
+        Car car1 =  new Car("red" , "seltos" , 2023);
+        Car car2 =  new Car("blue" , "bmx" , 2025);
+        car1.displayCar();
+        System.out.println("---------------");
+        car2.displayCar();
+    }
 }

@@ -1,0 +1,33 @@
+class Main {
+    public static void main(String[] args) {
+        RockStar game = new RockStar("GTA", 18);
+        game.print();
+    }
+}
+
+class Games {
+    String gameType;
+    int ageLimit;
+
+    Games(String gameType, int ageLimit) {
+        this.gameType = gameType;
+        this.ageLimit = ageLimit;
+        System.out.println("Base class constructor invoked");
+    }
+
+    void display() {
+        System.out.println("The game's main class: " + this.gameType + ", Age Limit: " + this.ageLimit);
+    }
+}
+
+class RockStar extends Games {
+    RockStar(String gameType, int ageLimit) {
+        super(gameType, ageLimit); // Correct use of super constructor
+        System.out.println("RockStar Games Pvt Ltd");
+    }
+
+    void print() {
+        super.display();
+        System.out.println("GTA 6 is coming soon!");
+    }
+}
